@@ -1,3 +1,4 @@
+package Banco;
 public class ContaCorrente {
     private int numeroConta;
     private double saldo;

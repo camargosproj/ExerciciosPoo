@@ -1,3 +1,4 @@
+package Banco;
 
 public class Conta {
     private String propietario;
