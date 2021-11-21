@@ -7,13 +7,13 @@ public class Pais {
     private String nome;
     private String capital;
     private double dimensao;
-    private List<Pais> paises;
+    private List<Pais> listaPaises;
 
     public Pais(String nome, String capital, double dimensao) {
         this.nome = nome;
         this.capital = capital;
         this.dimensao = dimensao;
-        this.paises = new LinkedList<>();
+        this.listaPaises = new LinkedList<>();
     }
 
     public String getNome() {
@@ -41,11 +41,11 @@ public class Pais {
     }
 
     public List<Pais> getPaises() {
-        return paises;
+        return listaPaises;
     }
 
     public void setPaises(List<Pais> paises) {
-        this.paises = paises;
+        this.listaPaises = paises;
     }
     public boolean equals(final Pais pais) {
         return this.getNome().equals(pais.getNome()) && this.getCapital().equals(pais.getCapital());
@@ -53,18 +53,18 @@ public class Pais {
     
     public void adicionarPais(Pais pais){
         if(!equals(pais)){
-            paises.add(pais);
+            listaPaises.add(pais);
         }
     }
     public void setPaisFronteira(List<Pais> paises) {
-        this.paises.clear();
+        this.listaPaises.clear();
         for (Pais pais : paises) {
             adicionarPais(pais);
         }
     }
 
     public List<Pais> getPaisFronteira() {
-        return paises;
+        return listaPaises;
     }
 
 }
